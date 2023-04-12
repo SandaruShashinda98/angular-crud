@@ -1,0 +1,58 @@
+{
+  "items": [
+    {
+      "id": "77042",
+      "title": "samsung tv",
+      "description": "curved tv",
+      "category": "tv",
+      "price": "1000",
+      "shippedFrom": "china",
+      "date": "2023-04-11T18:30:00.000Z"
+    },
+    {
+      "id": "74694",
+      "title": "ipad",
+      "description": "ipad 9 mint conditon",
+      "category": "tablet",
+      "price": 100400,
+      "shippedFrom": "India",
+      "date": "2023-04-18T18:30:00.000Z"
+    },
+    {
+      "id": "27601",
+      "title": "samsung note 10",
+      "description": "phone with stylus",
+      "category": "phone",
+      "price": 35000,
+      "shippedFrom": "china",
+      "date": "2023-04-09T18:30:00.000Z"
+    },
+    {
+      "id": "13885",
+      "title": "xiomi 10",
+      "description": "mid range phone",
+      "category": "phone",
+      "price": 12000,
+      "shippedFrom": "India",
+      "date": "2023-04-12T18:30:00.000Z"
+    },
+    {
+      "id": "20464",
+      "title": "asus",
+      "description": "asus pro book",
+      "category": "laptop",
+      "price": 250000,
+      "shippedFrom": "USA",
+      "date": "2023-04-12T18:30:00.000Z"
+    },
+    {
+      "id": "80116",
+      "title": "mac book",
+      "description": "mac book pro m1 chip",
+      "category": "laptop",
+      "price": 450000,
+      "shippedFrom": "USA",
+      "date": "2023-04-27T18:30:00.000Z"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+<div style="padding: 10px">
+  <h1 mat-dialog-title>Confirmation</h1>
+  <div mat-dialog-content>
+    <p>{{ data.message }}</p>
+  </div>
+  <div mat-dialog-actions style="display: flex; justify-content: flex-end">
+    <button mat-flat-button color="accent" [mat-dialog-close]="false">
+      Cancel
+    </button>
+    <button
+      mat-flat-button
+      color="warn"
+      [mat-dialog-close]="true"
+      cdkFocusInitial
+    >
+      Delete
+    </button>
+  </div>
+</div>

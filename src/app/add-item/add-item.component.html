@@ -1,0 +1,169 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-8 mb-3">
+      <mat-card>
+        <mat-card-title-group>
+          <mat-card-title
+            mat-dialog-title
+            class="d-flex align-items-center mb-1"
+          >
+            Add Item
+          </mat-card-title>
+        </mat-card-title-group>
+
+        <mat-divider></mat-divider>
+
+        <mat-card-content style="margin-top: 15px">
+          <form [formGroup]="form">
+            <div class="row">
+              <div class="col">
+                <mat-form-field
+                  class="mb-2"
+                  appearance="fill"
+                  style="width: 100%"
+                >
+                  <mat-label>title</mat-label>
+                  <input
+                    type="text"
+                    #titleField
+                    matInput
+                    maxlength="70"
+                    placeholder="title"
+                    formControlName="title"
+                    required
+                  />
+                  <mat-error>Title is required</mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <mat-form-field
+                  class="mb-2"
+                  appearance="fill"
+                  style="width: 100%"
+                >
+                  <mat-label>Description</mat-label>
+                  <input
+                    type="text"
+                    #titleField
+                    matInput
+                    maxlength="70"
+                    placeholder="Description"
+                    formControlName="description"
+                    required
+                  />
+                  <mat-error>Description is required</mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <mat-form-field
+                  class="mb-2"
+                  appearance="fill"
+                  style="width: 100%"
+                >
+                  <mat-label>Category</mat-label>
+                  <mat-select formControlName="category">
+                    <mat-option
+                      *ngFor="let category of categoryList"
+                      [value]="category"
+                    >
+                      {{ category }}
+                    </mat-option>
+                  </mat-select>
+                  <mat-error>Category is required</mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <mat-form-field
+                  class="mb-2"
+                  appearance="fill"
+                  style="width: 100%"
+                >
+                  <mat-label>Price</mat-label>
+                  <input matInput formControlName="price" type="number" />
+                  <span matSuffix style="padding-right: 5px">Rs</span>
+                  <mat-error>Price is required</mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <mat-form-field
+                  class="mb-2"
+                  appearance="fill"
+                  style="width: 100%"
+                >
+                  <mat-label>Shipped From</mat-label>
+                  <input
+                    type="text"
+                    matInput
+                    formControlName="shippedFrom"
+                    [matAutocomplete]="auto"
+                  />
+                  <mat-autocomplete #auto="matAutocomplete">
+                    <mat-option
+                      *ngFor="let country of countries"
+                      [value]="country"
+                    >
+                      {{ country }}
+                    </mat-option>
+                  </mat-autocomplete>
+                  <mat-error>Shipped From is required</mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <mat-form-field appearance="fill" style="width: 100%">
+                  <mat-label>Date</mat-label>
+                  <input
+                    placeholder="Date"
+                    type="text"
+                    matInput
+                    formControlName="date"
+                    [matDatepicker]="pickerA"
+                    (click)="pickerA.open()"
+                    required
+                  />
+                  <mat-datepicker-toggle
+                    matSuffix
+                    [for]="pickerA"
+                  ></mat-datepicker-toggle>
+                  <mat-datepicker #pickerA></mat-datepicker>
+                  <mat-error>Date is required</mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+          </form>
+        </mat-card-content>
+
+        <mat-card-actions>
+          <div
+            class="row"
+            style="align-self: flex-end; margin-left: auto; padding: 10px"
+          >
+            <button
+              (click)="onSave()"
+              class="m-2"
+              style="white-space: pre-wrap"
+              mat-flat-button
+              [disabled]="form.invalid || form.pristine"
+            >
+              save
+            </button>
+          </div>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>
